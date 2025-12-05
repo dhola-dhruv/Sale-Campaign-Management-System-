@@ -23,7 +23,7 @@ public class ScheduledService {
     @Autowired
     PriceHistoryRepository priceHistoryRepository;
 
-    @Scheduled(cron = "00 39 12 * * ?")
+    @Scheduled(cron = "00 39 16 * * ?")
     @Transactional
     public void campaignStart(){
         List<Campaign> campaigns = campaignRepository.findAll();
@@ -57,7 +57,7 @@ public class ScheduledService {
         }
     }
 
-    @Scheduled(cron = "00 40 12 * * ?")
+    @Scheduled(cron = "30 40 16 * * ?")
     @Transactional
     public void campaignEnd(){
         List<Campaign> campaigns = campaignRepository.findAll();

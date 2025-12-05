@@ -22,7 +22,7 @@ public class CampaignService {
         for (ProductDiscount pd: campaign.getProductDiscounts2()){
             pd.setCampaign(campaign);
 
-            String pId = pd.getProductList().getPId();
+            String pId = pd.getProductList().getpId();
             ProductList product = productListRepository.findById(pId).orElseThrow(() ->
                     new RuntimeException("Product with ID " + pId + " not found"));
             pd.setProductList(product);

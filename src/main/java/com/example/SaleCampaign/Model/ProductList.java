@@ -26,4 +26,11 @@ public class ProductList {
     @JsonIgnore
     private List<PriceHistory> priceHistories;
 
+    public String getpId() {
+        return pId;
+    }
+
+    public void setpId(String pId) {
+        this.pId = pId;
+    }
 }
